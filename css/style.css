@@ -15,7 +15,7 @@ a{
     color: #899293;
 }
 
-.nav, .logo, .menu ul, .cardContainer, .lugarFecha, .formulario, .form, .formInputs, .footer ul {
+.nav, .logo, .menu ul, .confInfo, .cardContainer, .lugarFecha, .formulario, .form, .formInputs, .footer ul {
     display: flex;
 }
 
@@ -54,28 +54,29 @@ a{
 .menu li{
     font-size: 1rem;
     font-weight: 600;
-    color: #899293;
+    margin-left: 20px;
 }
 
 .menu .selected{
     color: #e8f8f9;
 }
 
-.menu a{
-    margin-left: 20px;
-}
-
 .menuComprar a{
     color: #418a51;
 }
 
+.conferencia{
+    width: 100vw;
+}
+
 .conferencia img{
     filter: brightness(0.6);
-    height: 100vh;
-    width: fit-content;
+    width: screen;
+    height: auto;
 }
 
 .confInfo{
+    flex-direction: column;
     position: absolute;
     top: 35%;
     right: 10%;
@@ -96,7 +97,7 @@ a{
     margin-top: 20px;
 }
 
-button{
+.button{
     color: #e8f8f9;
     background-color: transparent;
     font-family: 'Oxygen', sans-serif;
@@ -207,18 +208,16 @@ button{
 }
 
 .imgLugar img{
+    width: 100%;
     height: 100%;
 }
 
 .lugarFechaInfo{
-    padding: 15px;    
+    padding: 25px;    
     color: #fff;
     font-size: 0.9rem;
     line-height: 2;
-}
-
-.supIndice{
-    text-transform: capitalize;
+    width: 50%;
 }
 
 .buttonFecha{
@@ -311,4 +310,186 @@ button{
 .footer a{
     color: #e8f8f9;
     font-weight: 400;
+}
+
+/* Breakpoint	Class infix	Dimensions
+Extra small	None	<576px
+Small	sm	≥576px
+Medium	md	≥768px
+Large	lg	≥992px
+Extra large	xl	≥1200px
+Extra extra large	xxl	≥1400px */
+
+/*CELULAR*/
+
+@media screen and (max-width: 767px){
+
+    .nav{
+        height: 50px;
+        padding: 15px 15px;
+    }
+    
+    .logo img{
+        height: 25px;
+        margin-right: 0px;
+    }
+    
+    .logo h2{
+        display: none;
+    }
+    
+    .menu ul{
+        height: 25px;
+        margin-left: 0px;
+        justify-content: space-between;
+    }
+    
+    .menu li{
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-align: center;
+        width: 60px;
+    }
+
+    .conferencia
+        {overflow: hidden;
+    }
+
+    .conferencia img{
+        height: 100vh;
+        width: auto;
+    }
+
+    .confInfo{
+        top: 20%;
+        right: 20%;
+        flex-wrap: wrap;
+        width: 300px;
+        text-align: center; 
+    }
+    
+    .button{
+        margin: 5px 0 10px 0px;
+        width: 300px;
+        justify-content: center;
+    }
+    
+   .oradores{
+        padding: 60px;
+    }
+    
+    .tituloSection {
+        margin-top: 10px;
+    }
+    
+    .cardContainer{
+        flex-wrap: wrap;
+        padding: 0;
+    }
+    
+    .card{
+        width: 280px;
+        overflow: hidden;
+        margin-bottom: 30px;
+    }
+    
+    .card img{
+        height: 280px;
+    }
+    
+    .tags{
+        display: flex;
+        justify-content: center;
+    }
+
+    .tag{
+        margin: 0 2px;
+    }
+    
+    .cardInfo h3{
+        text-align: center;
+    }
+    
+    .cardInfo p{
+        text-align: center;
+    }
+    
+    .lugarFecha{
+        flex-direction: column;
+        justify-content: center;
+        height: auto;
+    }
+    
+    .imgLugar{
+        width: 100%;
+        height: 40vh;
+    }
+    
+    .lugarFechaInfo{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .lugarFechaInfo p{
+        margin: 10px 30px;
+    }
+
+    .buttonFecha{
+        margin: 15px 0;
+        width: 100%;
+    }
+    .formulario p, .textarea{
+        width: 300px;
+    }
+
+    .formInputs{
+        flex-direction: column;
+    }
+
+    .input{
+        margin-top: 20px;
+    }
+    
+    .arrow{
+        display: none;
+    }
+    
+    .footer{
+        padding: 10px;
+    }
+
+    .footer ul{
+        flex-direction: column;
+        align-items: space-between;
+    }
+    
+    .footer li{
+        padding: 5px;
+    }
+    
+    .footer a{
+        color: #e8f8f9;
+        font-weight: 400;
+    }
+}
+
+
+/*TABLET*/
+
+@media screen and (min-width:768px) and (max-width:1023px) {
+
+}
+
+/*NOTEBOOK*/
+
+@media screen and (min-width:1024px) and (max-width: 1400px) {
+    
+    }
+
+/*PC*/
+
+@media screen and (min-width:1401px) {
+    
 }
