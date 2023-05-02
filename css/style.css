@@ -49,6 +49,7 @@ a{
     height: 35px;
     list-style-type: none;
     align-items: center;
+    text-align: center;
 }
 
 .menu li{
@@ -210,21 +211,24 @@ background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
 }
 
 .lugarFecha{
-    background-color: #353a40;
-    height: 400px;
+    height: auto;
 }
 
 .imgLugar{
-    width: 50%;
+    width: 50vw;
+    overflow: hidden;
+    border-right: 1px solid #fff;
 }
 
 .imgLugar img{
-    width: 100%;
+    max-width: 100%;
+    min-width: 560px;
     height: 100%;
 }
 
 .lugarFechaInfo{
-    padding: 25px;    
+    background-color: #353a40;
+    padding: 25px 40px;    
     color: #fff;
     font-size: 0.9rem;
     line-height: 2;
@@ -331,24 +335,95 @@ Large	lg	≥992px
 Extra large	xl	≥1200px
 Extra extra large	xxl	≥1400px */
 
+/*PC*/
+
+@media screen and (min-width:1401px) {
+    
+}
+
+/*NOTEBOOK*/
+
+@media screen and (min-width:1024px) and (max-width: 1400px) {
+    
+}
+
+/*TABLET*/
+
+@media screen and (min-width:768px) and (max-width:1023px) {
+    .nav{
+        display: flex;
+        flex-wrap: wrap;
+        height: auto;
+        padding: 15px 5px;
+    }
+
+    .logo{
+        width: 100vh;
+        justify-content: center;
+    }
+    
+    .menu{
+        width: 100vh;        
+    }
+
+    .menu ul{
+        justify-content: space-around;
+    }
+   
+    .menu li{
+        margin-left: 0;
+    }
+
+    .cardContainer{
+        flex-wrap: wrap;
+        margin: 50px;
+    }
+
+    .lugarFecha{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .imgLugar{
+        border: none;
+        width: 100vw;
+    }
+
+    .lugarFechaInfo{
+        width: 100vw;
+    }   
+}
+
 /*CELULAR*/
 
 @media screen and (max-width: 767px){
-
     .nav{
-        height: 50px;
-        padding: 15px 15px;
+        display: flex;
+        flex-wrap: wrap;
+        height: auto;
+        padding: 15px 5px;
     }
-    
+
+    .logo{
+        width: 100%;
+        justify-content: center;
+    }
+
     .logo img{
         height: 25px;
         margin-right: 0px;
     }
-    
+
     .logo h2{
-        display: none;
+        font-size: 0.8rem;
+        width: auto;
     }
     
+    .menu{
+        width: 100vh;
+        margin: 5px 10%;
+    }
+   
     .menu ul{
         height: 25px;
         margin-left: 0px;
@@ -356,14 +431,11 @@ Extra extra large	xxl	≥1400px */
     }
     
     .menu li{
+        margin-left: 0;
         font-size: 0.8rem;
         font-weight: 600;
         text-align: center;
-        width: 60px;
-    }
-
-    .conferencia
-        {overflow: hidden;
+        width: 60px; 
     }
 
     .conferencia img{
@@ -372,10 +444,10 @@ Extra extra large	xxl	≥1400px */
     }
 
     .confInfo{
-        top: 20%;
-        right: 20%;
+        top: 30%;
+        right: 25%;
         flex-wrap: wrap;
-        width: 300px;
+        width: 350px;
         text-align: center; 
     }
     
@@ -395,34 +467,6 @@ Extra extra large	xxl	≥1400px */
     
     .cardContainer{
         flex-wrap: wrap;
-        padding: 0;
-    }
-    
-    .card{
-        width: 280px;
-        overflow: hidden;
-        margin-bottom: 30px;
-    }
-    
-    .card img{
-        height: 280px;
-    }
-    
-    .tags{
-        display: flex;
-        justify-content: center;
-    }
-
-    .tag{
-        margin: 0 2px;
-    }
-    
-    .cardInfo h3{
-        text-align: center;
-    }
-    
-    .cardInfo p{
-        text-align: center;
     }
     
     .lugarFecha{
@@ -484,23 +528,5 @@ Extra extra large	xxl	≥1400px */
         color: #e8f8f9;
         font-weight: 400;
     }
-}
 
-
-/*TABLET*/
-
-@media screen and (min-width:768px) and (max-width:1023px) {
-
-}
-
-/*NOTEBOOK*/
-
-@media screen and (min-width:1024px) and (max-width: 1400px) {
-    
-    }
-
-/*PC*/
-
-@media screen and (min-width:1401px) {
-    
 }
