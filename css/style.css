@@ -65,14 +65,16 @@ a{
     color: #418a51;
 }
 
-.conferencia{
-    width: 100vw;
+.comprar{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
 }
 
-.conferencia img{
-    filter: brightness(0.6);
-    width: screen;
-    height: auto;
+.conferencia{
+background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(/assets/img/ba1.jpg);
+    height: 100vh;
 }
 
 .confInfo{
@@ -116,6 +118,11 @@ a{
     background-color: #418a51;
 }
 
+.buttonComprar a{
+    text-decoration: none;
+    color: #e8f8f9;
+}
+
 .oradores{
     padding: 50px;
 }
@@ -141,7 +148,7 @@ a{
 
 .card{
     width: 300px;
-    height: 550px;
+    min-height: 550px;
     border-color: #353a40;
     box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
     border-radius: 15px;
@@ -151,6 +158,10 @@ a{
 
 .card img{
     height: 300px;
+    width: 300px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    overflow: hidden;
 }
 
 .cardInfo{
@@ -279,6 +290,7 @@ a{
     left: 95vw;
     bottom: 30px;
     margin-right: 30px;
+    margin-bottom: 20px;
     z-index: 10;
     font-size: 2rem;
 }
@@ -309,7 +321,6 @@ a{
 
 .footer a{
     color: #e8f8f9;
-    font-weight: 400;
 }
 
 /* Breakpoint	Class infix	Dimensions
